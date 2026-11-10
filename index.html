@@ -231,7 +231,16 @@ footer small{display:block;margin-top:18px;font-size:.85rem;opacity:.75}
     </div>
   </section>
 </main>
-
+ <!-- Chariow Widget -->
+<div id="chariow-widget" data-product-id="prd_ih5a5cii"
+    data-store-domain="bcpfdtup.mychariow.co"
+    data-style="tap"
+    data-border-style="rounded"
+    data-cta-width="xs"
+    data-background-color="#FFFFFF"
+    data-cta-animation="shine"
+    data-locale="en"
+    data-primary-color="#ffcc00"></div>
 <footer>
   <div class="wrap">
     <div class="mark" role="img" aria-label="Time Healers logo mark"></div>
@@ -239,7 +248,21 @@ footer small{display:block;margin-top:18px;font-size:.85rem;opacity:.75}
     <small>&copy; <span id="yr"></span> Time Healers Digital Hub. All rights reserved.</small>
   </div>
 </footer>
+  <!-- Chariow Widget Script-->
+<script>
+(function() {
+  var script = document.createElement('script');
+  script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
+  script.async = true;
+  document.head.appendChild(script);
 
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+  document.head.appendChild(link);
+})();
+</script>
+  
 <script>
 // Live clock + ticks
 (function(){
@@ -279,28 +302,5 @@ document.querySelectorAll('a[data-s]').forEach(function(a){
   });
 })();
 </script>
-  <!-- Chariow Widget -->
-<div id="chariow-widget" data-product-id="prd_ih5a5cii"
-    data-store-domain="bcpfdtup.mychariow.co"
-    data-style="tap"
-    data-border-style="rounded"
-    data-cta-width="xs"
-    data-background-color="#FFFFFF"
-    data-cta-animation="shine"
-    data-locale="en"
-    data-primary-color="#ffcc00"></div>
-<script>
-(function() {
-  var script = document.createElement('script');
-  script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
-  script.async = true;
-  document.head.appendChild(script);
-
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
-  document.head.appendChild(link);
-})();
-</script>
-</body>
+ </body>
 </html>
