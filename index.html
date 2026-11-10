@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Healers Digital Hub | Web, Apps, Marketing, Design, Video &amp; Training</title>
+<meta name="description" content="Time Healers Digital Hub: web development, app development, digital marketing, graphic design, video editing and online corporate training. Ideas today, impact tomorrow.">
+<meta name="theme-color" content="#0B2B5C">
+<link rel="icon" type="image/png" href="Designer.png">
+<link rel="apple-touch-icon" href="Designer.png">
+<meta property="og:title" content="Time Healers Digital Hub">
+<meta property="og:description" content="Your time. Our expertise. A better digital tomorrow.">
+<meta property="og:image" content="Designer.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Figtree:wght@400;500;600&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,0,0&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B2B5C;--blue:#0B7FB5;--cyan:#12B3DE;--orange:#F7A11A;
+  --ink:#16243f;--muted:#4f5f7a;--mist:#F1F7FB;--line:#dbe6ef;--white:#fff;
+  --head:'Montserrat','Segoe UI',Arial,sans-serif;--body:'Figtree','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+.icon{font-family:'Material Symbols Rounded';font-weight:500;font-style:normal;line-height:1;display:inline-block;font-feature-settings:'liga';-webkit-font-feature-settings:'liga';user-select:none}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);color:var(--navy);line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800}
+h3{font-size:1.15rem;font-weight:700}
+section{padding:96px 0}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:64px;height:40px;background:url(Designer.png) -34px -1px/131px auto no-repeat;flex:none}
+.brand b{display:block;font:800 1.08rem/1 var(--head);color:var(--navy)}
+.brand b span{color:var(--blue)}
+.brand small{display:block;font:700 .62rem/1 var(--head);letter-spacing:.42em;color:var(--navy);margin-top:5px}
+nav{display:flex;align-items:center;gap:28px}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--muted)}
+nav a:hover{color:var(--navy)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:700 .98rem var(--head);padding:14px 26px;border-radius:999px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--navy);color:#fff;box-shadow:0 8px 20px -8px rgba(11,43,92,.6)}
+.btn-alt{background:#fff;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+nav .btn{padding:10px 20px;color:#fff}
+@media(max-width:820px){nav a:not(.btn){display:none}.brand small{display:none}}
+
+/* hero */
+.hero{padding:72px 0 88px;background:radial-gradient(900px 500px at 85% 20%,#e3f3fb 0,transparent 70%),#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.5rem,6vw,4.4rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 em{font-style:normal;display:block;color:var(--blue)}
+.hero h1 i{font-style:normal;display:block;color:var(--orange)}
+.hero p{max-width:30em;margin:22px 0 32px;color:var(--muted);font-size:1.12rem}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.clock{width:min(440px,100%);margin-inline:auto;filter:drop-shadow(0 30px 30px rgba(11,43,92,.16))}
+.clock .sweep{transform-origin:100px 100px;animation:sweep 1.6s cubic-bezier(.2,.7,.2,1) both}
+@keyframes sweep{from{transform:rotate(-140deg);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.clock{width:min(320px,80%)}}
+
+/* tagline strip */
+.strip{background:var(--navy);color:#fff;padding:22px 0}
+.strip ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 40px;font:600 1.02rem var(--head);font-style:italic;letter-spacing:.08em}
+.strip li::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--orange);margin-right:12px}
+
+/* services */
+.head{max-width:620px;margin-bottom:48px}
+.head p{color:var(--muted);margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{padding:28px;border:1px solid var(--line);border-radius:20px;background:#fff;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 18px 34px -18px rgba(11,43,92,.35);transform:translateY(-3px)}
+.ico{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;margin-bottom:18px}
+.ico .icon{font-size:32px}
+.card p{color:var(--muted);margin-top:8px;font-size:.98rem}
+.card a.more{display:inline-flex;gap:4px;align-items:center;margin-top:14px;font-weight:700;font-size:.92rem;color:var(--blue);text-decoration:none}
+
+/* about */
+.about{background:var(--mist)}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.logo-card{background:#fff;border-radius:28px;padding:28px;box-shadow:0 24px 50px -28px rgba(11,43,92,.45)}
+.about p{color:var(--muted);margin-top:16px}
+.pillars{display:grid;gap:18px;margin-top:30px}
+.pillar{display:flex;gap:16px;align-items:flex-start}
+.pillar .icon{font-size:26px;color:#fff;background:var(--blue);width:48px;height:48px;border-radius:14px;display:grid;place-items:center;flex:none}
+.pillar:nth-child(2) .icon{background:var(--navy)}
+.pillar:nth-child(3) .icon{background:var(--orange)}
+.pillar h3{font-size:1.05rem}
+.pillar p{margin:2px 0 0;font-size:.97rem}
+@media(max-width:820px){.about .wrap{grid-template-columns:1fr}}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+.contact .side p{color:var(--muted);margin-top:14px}
+.side ul{list-style:none;padding:0;margin-top:26px;display:grid;gap:14px}
+.side li{display:flex;gap:12px;align-items:center;font-weight:600;color:var(--navy)}
+.side li .icon{color:var(--orange)}
+form{background:#fff;border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:0 24px 50px -32px rgba(11,43,92,.5);display:grid;gap:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+label{display:grid;gap:6px;font-weight:600;font-size:.92rem;color:var(--navy)}
+input,select,textarea{font:inherit;color:var(--ink);padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;background:#fff;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(18,179,222,.2)}
+textarea{min-height:130px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+.status{border-radius:12px;padding:14px 16px;font-weight:600;display:none}
+.status.ok{display:block;background:#e3f6ec;color:#11633b}
+.status.err{display:block;background:#fdebea;color:#9a1f1a}
+button[disabled]{opacity:.65;cursor:wait}
+@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}.two{grid-template-columns:1fr}form{padding:24px}}
+
+footer{background:var(--navy);color:#cfe0f1;padding:44px 0 30px;text-align:center}
+footer .mark{margin:0 auto 14px;filter:brightness(0) invert(1);opacity:.95}
+footer p.tag{font:700 .75rem var(--head);letter-spacing:.34em;color:#fff}
+footer small{display:block;margin-top:18px;font-size:.85rem;opacity:.75}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Time Healers Digital Hub home">
+      <span class="mark" role="img" aria-label="Time Healers logo mark"></span>
+      <span><b>Time <span>Healers</span></b><small>DIGITAL HUB</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="btn btn-main">Get in touch</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Your time.<em>Our expertise.</em><i>A better digital tomorrow.</i></h1>
+        <p>Time Healers Digital Hub builds websites and apps, grows brands online, designs and edits creative content, and trains teams, so you can spend your hours on what matters.</p>
+        <div class="cta">
+          <a class="btn btn-main" href="#contact"><span class="icon">chat</span>Start a project</a>
+          <a class="btn btn-alt" href="#services">See our services</a>
+        </div>
+      </div>
+      <svg class="clock" viewBox="0 0 200 200" role="img" aria-label="Live analog clock showing the current time">
+        <path class="sweep" d="M24 96C20 50 56 14 100 12c-30 6-54 30-56 64-2 34 20 62 52 70-40 6-70-18-72-50z" fill="#12B3DE"/>
+        <path class="sweep" d="M30 112c4 38 38 70 80 66-34-4-62-30-64-62 0-4 0-8 2-12z" fill="#0B7FB5" opacity=".85"/>
+        <circle cx="100" cy="100" r="72" fill="#fff" stroke="#0B2B5C" stroke-width="3"/>
+        <g id="ticks" stroke="#0B2B5C" stroke-linecap="round"></g>
+        <line id="hh" x1="100" y1="100" x2="100" y2="62" stroke="#0B2B5C" stroke-width="6" stroke-linecap="round"/>
+        <line id="mh" x1="100" y1="100" x2="100" y2="42" stroke="#0B2B5C" stroke-width="4" stroke-linecap="round"/>
+        <line id="sh" x1="100" y1="112" x2="100" y2="36" stroke="#F7A11A" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="100" cy="100" r="5.5" fill="#F7A11A"/>
+        <path class="sweep" d="M52 148C96 148 150 118 172 62c-4 36-52 90-120 96z" fill="#F7A11A"/>
+        <g fill="#12B3DE"><rect x="168" y="22" width="12" height="12"/><rect x="152" y="36" width="9" height="9" fill="#0B7FB5"/><rect x="178" y="44" width="8" height="8" fill="#F7A11A"/></g>
+      </svg>
+    </div>
+  </section>
+
+  <div class="strip"><ul><li>Your Time</li><li>Our Expertise</li><li>A Better Digital Tomorrow</li></ul></div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="head">
+        <h2>What we do</h2>
+        <p>Six core services under one roof, and the flexibility to take on more. Tell us what you need and we will shape the right solution.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="ico" style="background:#D6E9F8"><span class="icon" style="color:#0B3C78">web</span></div><h3>Web Development</h3><p>Fast, responsive websites and web platforms that present your business clearly and convert visitors into customers.</p><a class="more" href="#contact" data-s="Web Development">Ask about this <span class="icon">arrow_forward</span></a></article>
+        <article class="card"><div class="ico" style="background:#D3F1E6"><span class="icon" style="color:#0B2B5C">smartphone</span></div><h3>App Development</h3><p>Mobile and cross-platform apps designed around how your users actually work, from first idea to launch.</p><a class="more" href="#contact" data-s="App Development">Ask about this <span class="icon">arrow_forward</span></a></article>
+        <article class="card"><div class="ico" style="background:#FDE6CC"><span class="icon" style="color:#F28C1E">campaign</span></div><h3>Digital Marketing</h3><p>Social media, content and campaigns that help the right audience find you and remember you.</p><a class="more" href="#contact" data-s="Digital Marketing">Ask about this <span class="icon">arrow_forward</span></a></article>
+        <article class="card"><div class="ico" style="background:#E7DCF3"><span class="icon" style="color:#7B3FA0">ink_pen</span></div><h3>Graphic Design</h3><p>Logos, brand kits, flyers and social visuals that give your business a consistent, professional look.</p><a class="more" href="#contact" data-s="Graphic Design">Ask about this <span class="icon">arrow_forward</span></a></article>
+        <article class="card"><div class="ico" style="background:#FADADF"><span class="icon" style="color:#B8284F">movie</span></div><h3>Video Editing</h3><p>Promo videos, social clips and event highlights, edited with clean pacing, sound and motion.</p><a class="more" href="#contact" data-s="Video Editing">Ask about this <span class="icon">arrow_forward</span></a></article>
+        <article class="card"><div class="ico" style="background:#D2E8F8"><span class="icon" style="color:#0B7FB5">co_present</span></div><h3>Online Corporate Training</h3><p>Live and self-paced digital skills training for teams, delivered online and tailored to your organization.</p><a class="more" href="#contact" data-s="Online Corporate Training">Ask about this <span class="icon">arrow_forward</span></a></article>
+        <article class="card"><div class="ico" style="background:#E6E8EC"><span class="icon" style="color:#4a5568">more_horiz</span></div><h3>And more</h3><p>Have a digital need that is not listed? Send us a message and we will tell you honestly whether we can help.</p><a class="more" href="#contact" data-s="Other / Not sure yet">Tell us what you need <span class="icon">arrow_forward</span></a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <div class="logo-card"><img src="Designer.png" alt="Time Healers Digital Hub logo with services: web development, app development, digital marketing, graphic design, video editing and online corporate training" loading="lazy"></div>
+      <div>
+        <h2>Ideas today, impact tomorrow</h2>
+        <p>Time Healers Digital Hub is a digital services studio. We take on the technical and creative work that eats into your day, and return it as something that works, looks good and moves your business forward.</p>
+        <div class="pillars">
+          <div class="pillar"><span class="icon">schedule</span><div><h3>Your time</h3><p>We respect your schedule with clear timelines, regular updates and no surprises.</p></div></div>
+          <div class="pillar"><span class="icon">workspace_premium</span><div><h3>Our expertise</h3><p>Development, design, marketing, video and training handled by one connected team.</p></div></div>
+          <div class="pillar"><span class="icon">rocket_launch</span><div><h3>A better digital tomorrow</h3><p>Solutions built to grow with you, not to be replaced next year.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="side">
+        <h2>Send us an inquiry</h2>
+        <p>Share a few details about your project. We read every message and reply as soon as we can.</p>
+        <ul>
+          <li><span class="icon">edit_note</span>Tell us what you need</li>
+          <li><span class="icon">mark_email_read</span>We reply by email</li>
+          <li><span class="icon">handshake</span>We agree scope and next steps</li>
+        </ul>
+      </div>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree form ID (from formspree.io/f/xxxxxxxx) -->
+      <form id="inquiry" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+        <div class="two">
+          <label>Full name<input name="name" type="text" autocomplete="name" required></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <div class="two">
+          <label>Phone or WhatsApp (optional)<input name="phone" type="tel" autocomplete="tel"></label>
+          <label>Service<select name="service" id="service">
+            <option>Web Development</option><option>App Development</option><option>Digital Marketing</option>
+            <option>Graphic Design</option><option>Video Editing</option><option>Online Corporate Training</option>
+            <option>Other / Not sure yet</option></select></label>
+        </div>
+        <label>Your message<textarea name="message" required placeholder="What would you like to achieve, and by when?"></textarea></label>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="New inquiry from Time Healers Digital Hub website">
+        <button class="btn btn-main" type="submit" id="send"><span class="icon">send</span>Send inquiry</button>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="mark" role="img" aria-label="Time Healers logo mark"></div>
+    <p class="tag">IDEAS TODAY &bull; IMPACT TOMORROW</p>
+    <small>&copy; <span id="yr"></span> Time Healers Digital Hub. All rights reserved.</small>
+  </div>
+</footer>
+
+<script>
+// Live clock + ticks
+(function(){
+  var t=document.getElementById('ticks'),s='';
+  for(var i=0;i<12;i++){var a=i*30*Math.PI/180,l=i%3===0?9:5,w=i%3===0?3.5:2.5;
+    s+='<line x1="'+(100+Math.sin(a)*62).toFixed(2)+'" y1="'+(100-Math.cos(a)*62).toFixed(2)+'" x2="'+(100+Math.sin(a)*(62-l)).toFixed(2)+'" y2="'+(100-Math.cos(a)*(62-l)).toFixed(2)+'" stroke-width="'+w+'"/>';}
+  t.innerHTML=s;
+  function tick(){var d=new Date(),sec=d.getSeconds(),m=d.getMinutes()+sec/60,h=(d.getHours()%12)+m/60;
+    document.getElementById('hh').setAttribute('transform','rotate('+h*30+' 100 100)');
+    document.getElementById('mh').setAttribute('transform','rotate('+m*6+' 100 100)');
+    document.getElementById('sh').setAttribute('transform','rotate('+sec*6+' 100 100)');}
+  tick();setInterval(tick,1000);
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+
+// Preselect service from card links
+document.querySelectorAll('a[data-s]').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('service').value=a.getAttribute('data-s');});
+});
+
+// Formspree submission (no server needed)
+(function(){
+  var f=document.getElementById('inquiry'),st=document.getElementById('status'),b=document.getElementById('send');
+  function show(c,m){st.className='status '+c;st.textContent=m;}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(f.action.indexOf('YOUR_FORM_ID')>-1){show('err','Form not connected yet: replace YOUR_FORM_ID in the form action with your Formspree form ID.');return;}
+    if(!f.name.value.trim()||!/^\S+@\S+\.\S+$/.test(f.email.value)||!f.message.value.trim()){show('err','Please enter your name, a valid email address and a message.');return;}
+    b.disabled=true;show('','');st.className='status';
+    fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
+      .then(function(r){
+        if(r.ok){show('ok','Thank you. Your inquiry has been sent and we will reply by email soon.');f.reset();}
+        else{return r.json().then(function(d){show('err',(d.errors&&d.errors.map(function(x){return x.message}).join(', '))||'Something went wrong. Please try again.');});}
+      })
+      .catch(function(){show('err','Network error. Check your connection and try again.');})
+      .finally(function(){b.disabled=false;});
+  });
+})();
+</script>
+</body>
+</html>
